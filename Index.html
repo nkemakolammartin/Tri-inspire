@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Tri-inspire</title>
+    <!-- image for title  and description-->
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./assets/images/TRI-INSPIRE logo.png" alt="Tri-inspire logo">
+            <div class="links">
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    About
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    Services
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    Get hired
+                </a>
+                <a class='yellow' href="http://" target="_blank" rel="noopener noreferrer">
+                    Hire talent
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section class='Hero'>
+        <div class="content">
+            <div class="texts">
+                <h1>Empower Your Tech Business. Unleash Your Career Potential.</h1>
+                <p>Connecting Tech Companies with Exceptional Talents for Sustainable Success.</p>
+            </div>
+            <div class="btn">
+                <a href="" class="yellow">Hire talent</a>
+                <a href="">Get hired</a>
+            </div>
+            <div class="images">
+                <img src="./assets/images/tech bro.png" alt="Tri-inspire develper">
+                <img src="./assets/images/tech sis.png" alt="Tri-inspire develper">
+            </div>
+        </div>
+    </section>
+    <section class="problem_statement">
+        <div class="content">
+            <div class="texts">
+                <h1>Struggling to find the right talent for your tech company?</h1>
+                <p>We understand the challenges you face. Likewise, as a talented individual, finding the perfect job opportunity can be overwhelming in the competitive tech industry. Tri Inspire is here to bridge the gap and make the process effortless. We specialize in talent acquisition and business consulting, ensuring a seamless and efficient match between exceptional talents and tech companies like yours.</p>
+            </div>
+            <div class="btn">
+                <a href="" class="purple">Hire talent</a>
+                <a href="">Get hired</a>
+            </div>
+        </div>
+    </section>
+    <section class="discover">
+        <div class="content">
+            <h1>DISCOVER THE TRI INSPIRE ADVANTAGE</h1>
+            <div class="frame5">
+                <div class="hireTalent">
+                    <img src="./assets/images/speed.png" alt="Want to get vetted talents with speed? Tri-inspire will get you talents within a week or two">
+                    <p class="hireText">We excel in speed, bringing you carefully vetted talents within a week or two.</p>
+                    <a href="">
+                        <P>Hire talent</P>
+                        <img src="./assets/images/arrow.png" alt="linking arrow">
+                    </a>
+                </div>
+                <div class="hireTalent">
+                    <img src="./assets/images/management.png" alt="Tri-inspire follows a talent-friendly approach in management of its talent">
+                    <p class="hireText" >Our talent-friendly approach goes beyond matching skills – we understand the importance of culture fit and provide the support talents need to thrive.</p>
+                    <a href="">
+                        <P>Hire talent</P>
+                        <img src="./assets/images/arrow.png" alt="linking arrow">
+                    </a>
+                </div>
+                <div class="hireTalent">
+                    <img src="./assets/images/delivery.png" alt="Tri-inspire is th perfect middleman, we ensure fairness and satisfaction for both parties">
+                    <p class="hireText" >As the perfect middleman, we ensure fairness and satisfaction for both parties, leaving no room for favoritism</p>
+                    <a href="">
+                        <P>Hire talent</P>
+                        <img src="./assets/images/arrow.png" alt="linking arrow">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="content">
+            <h1>OUR SERVICES</h1>
+            <div class="frame5">
+                <img src="./assets/images/services.png" alt="some of our services">
+                <div class="detailsHold">
+                    <details open>
+                        <summary>Talent acquisition</summary>
+                        <p>Our talent acquisition solutions connect you with skilled developers, designers, project managers, and engineers – the technical experts who will drive your company's success.</p>
+                    </details>
+                    <details>
+                        <summary>Data analysis</summary>
+                        <p>Our talent acquisition solutions connect you with skilled developers, designers, project managers, and engineers – the technical experts who will drive your company's success.</p>
+                    </details>
+                    <details>
+                        <summary>Accounting</summary>
+                        <p>Our talent acquisition solutions connect you with skilled developers, designers, project managers, and engineers – the technical experts who will drive your company's success.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    let details = document.querySelectorAll('details')
+    details.forEach((currentDetail)=>{
+        currentDetail.onclick=()=>{
+            details.forEach((detail)=>{
+                if (detail !== currentDetail) {
+                    detail.removeAttribute('open')   
+                }
+            })
+        }
+    })
+</script>
+</html>
