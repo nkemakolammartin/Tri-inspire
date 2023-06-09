@@ -11,6 +11,9 @@ html{
     width: 100vw;
     overflow-x: hidden;
 }
+.pup{
+    color: #3E1D4E;
+}
 body{
     margin: 0;
     overflow-x: hidden;
@@ -163,7 +166,7 @@ nav .links .yellow{
 problem statement */
 
 .problem_statement{
-    background-color: #3E1D4E14;
+    background-color: whitesmoke;
     z-index: 6;
     position: relative;
 }
@@ -330,7 +333,7 @@ padding: 0px;
 gap: 24px;
 justify-content: space-between;
 width: 520px;
-height: 348px;
+height: max-content;
 }
 .services .content .frame5 .detailsHold details summary{
     box-sizing: border-box;
@@ -686,6 +689,7 @@ footer .content p{
     #hamburger{
         display: block;
         padding-right: 50px;
+        z-index: 1000;
     }
     .Hero .content .images{
         top: 420px;
@@ -705,10 +709,22 @@ footer .content p{
 
     }
     nav .links{
+        background-color: #ECCB5E;
+        max-width: 600px;   
+        height: max-content;
+        padding: 50px;
+        box-sizing: border-box;
         flex-direction: column;
         align-items: center;
         top: -1000px;
+        left: 50%;
+        transition: all 200ms;
+        z-index: 100;
+        transform: translate(-50%);
         position: absolute;
+    }
+    header nav .links.active{
+        top: 0px;
     }
     header{
         display: flex;
@@ -719,6 +735,9 @@ footer .content p{
         justify-content: start;
         padding: 0px;
         padding-left: 50px;
+    }
+    nav .links .yellow{
+        color: #3E1D4E;
     }
     .Hero .content{
         gap: 40px;
@@ -779,7 +798,7 @@ footer .content p{
         font-size: 14px;
         height: max-content;
     }
-    #serviceImg{
+    #servicesImg{
         max-width: 302px;
         width: 100%;
     }
