@@ -20,10 +20,10 @@
                 <a href="http://" target="_blank" rel="noopener noreferrer">
                     Services
                 </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer">
+                <a href="http://calendly.com/timeilehin_adekunle" target="_blank" rel="noopener noreferrer">
                     Get hired
                 </a>
-                <a class='yellow' href="http://" target="_blank" rel="noopener noreferrer">
+                <a class='yellow' href="http://calendly.com/timeilehin_adekunle" target="_blank" rel="noopener noreferrer">
                     Hire talent
                 </a>
             </div>
@@ -93,7 +93,7 @@
         <div class="content">
             <h1>OUR SERVICES</h1>
             <div class="frame5">
-                <img src="./assets/images/services.png" alt="some of our services">
+                <img id="servicesImg" src="./assets/images/services.png" alt="some of our services">
                 <div class="detailsHold">
                     <details open>
                         <summary>Talent acquisition</summary>
@@ -176,10 +176,14 @@
     </footer>
 </body>
 <script>
+    let servicesImg = document.querySelector('#servicesImg')
     let swipeIndex = 0
     let details = document.querySelectorAll('details')
+    let path = ['./assets/images/small image man.png','./assets/images/small image woman.png']
     let ctrl = document.querySelectorAll('.reviews .content .slide .ctrl')
     let swiperContent = document.querySelector('.swiperContent')
+    let images = document.querySelectorAll('.Hero .content .images img')
+    document.body.clientWidth === 600 && path.forEach((pathUrl, id)=> images[id].src = pathUrl); servicesImg.src = './assets/images/small service img.png';
     details.forEach((currentDetail)=>{
         currentDetail.onclick=()=>{
             details.forEach((detail)=>{

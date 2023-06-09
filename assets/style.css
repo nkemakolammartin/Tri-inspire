@@ -7,6 +7,10 @@
     text-decoration: none;
     margin: 0;
 }
+html{
+    width: 100vw;
+    overflow-x: hidden;
+}
 body{
     margin: 0;
     overflow-x: hidden;
@@ -19,6 +23,7 @@ body{
     gap: 16px;
     align-items: flex-start;
     border-radius: 0px;
+    z-index: 10;
 }
 .purple{
     background-color: #3E1D4E;
@@ -420,7 +425,8 @@ align-items: center;
 padding: 0px;
 gap: 40px;
 overflow-x: scroll;
-width: 960px;
+max-width: 960px;
+width: 100%;
 height: 224px;
 }
 .swiperContent::-webkit-scrollbar{
@@ -433,7 +439,8 @@ align-items: flex-start;
 padding: 40px;
 gap: 24px;
 
-width: 480px;
+max-width: 480px;
+width: 100%;
 height: 224px;
 box-sizing: border-box;
 background: #FFFFFF;
@@ -441,7 +448,7 @@ border-radius: 4px;
 }
 
 .reviews .content .swiperContent .review p{
-    width: 400px;
+    max-width: 400px;
     height: 96px;
     font-family: 'Josefin Sans';
     font-style: normal;
@@ -573,9 +580,9 @@ footer .content .top{
     align-items: center;
     padding: 0px;
     gap: 24px;
-
-    width: 960px;
-    height: 100px;
+    width: 100%;
+    max-width: 960px;
+    height: max-content;
 }
 footer .content .top .texts{
     display: flex;
@@ -585,8 +592,8 @@ align-items: center;
 padding: 0px;
 gap: 4px;
 
-width: 960px;
-height: 52px;
+max-width: 960px;
+height: max-content;
 }
 footer .content .top .texts p{
     font-style: normal;
@@ -660,10 +667,13 @@ footer .content p{
         left: 50%;
         width: 100%;
         transform: translate(-50%);
-        top: 40%;
+        top: 530px;
     }
     .Hero .content .images img:first-child{
-        left: -100px;
+        left: -130px;
+    }
+    .Hero .content .images img:last-child{
+        left: 118px;
     }
     .Hero .content{
         height: 1024px;
@@ -676,6 +686,23 @@ footer .content p{
     #hamburger{
         display: block;
         padding-right: 50px;
+    }
+    .Hero .content .images{
+        top: 420px;
+        left: 30%;
+    }
+    .Hero .content .images img:first-child{
+        width: 498.3px;
+        height: 579.75px;
+        left: -38.63px;
+        top: 0;
+    }
+    .Hero .content .images img:last-child{
+        width: 409.02px;
+        height: 613.46px;
+        left: 203.39px;
+        top: 0;
+
     }
     nav .links{
         flex-direction: column;
@@ -693,13 +720,67 @@ footer .content p{
         padding: 0px;
         padding-left: 50px;
     }
+    .Hero .content{
+        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        height: 890.29px;
+    }
     .Hero .content .texts{
         height: max-content;
+        gap: 16px;
+        z-index: 10;
+    }
+    .Hero .content .texts h1{
+        font-size: 40px;
+    }
+
+    .Hero .content .texts p{
+        font-size: 14px;
     }
     .reviews .content .header{
         flex-direction: column;
     }
     .reviews .content .header h2, .reviews .content .header p{
+        width: 100%;
+    }
+    .reviews .content .header h2{
+        font-size: 24px;
+    }
+    .reviews .content .header p{
+        font-size: 14px;
+    }
+    .btn a{
+        font-size: 14px;
+    }
+    .problem_statement .content .texts h1{
+        font-size: 24px;
+    }
+    .discover .content h1{
+        height: fit-content;
+    }
+    .discover .content .frame5 .hireTalent .hireText, .discover .content .frame5 .hireTalent a{
+        font-size: 14px;
+    }
+    .services .content .frame5 .detailsHold details summary{
+        font-size: 24px;
+    }
+    .services .content .frame5 .detailsHold details p{
+        
+        height: max-content;
+        font-size: 14px;
+    }
+    .reviews .content .swiperContent .review{
+        padding: 24px;
+        gap: 16px;
+        height: max-content;
+    }
+    .cta .content .texts p,.reviews .content .swiperContent .review p{
+        font-size: 14px;
+        height: max-content;
+    }
+    #serviceImg{
+        max-width: 302px;
         width: 100%;
     }
 }
