@@ -20,8 +20,14 @@ body{
     align-items: flex-start;
     border-radius: 0px;
 }
+.purple{
+    background-color: #3E1D4E;
+    color: white;
+    border: 1px solid #3E1D4E;
+}
 .content{
     max-width: 1200px;
+    width: 100%;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -48,6 +54,7 @@ header{
 nav{
     display: flex;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     height: 72px;
     box-sizing: border-box;
@@ -93,6 +100,7 @@ nav .links .yellow{
 .Hero .content .texts{
     height: 264px;
     max-width: 640px;
+    width: 100%;
     border-radius: 0px;
     display: flex;
     flex-direction: column;
@@ -107,6 +115,7 @@ nav .links .yellow{
 }
 .Hero .content .texts p{
     max-width: 400px;
+    width: 100%;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -149,15 +158,12 @@ nav .links .yellow{
 problem statement */
 
 .problem_statement{
-    width: 100%;
     background-color: #3E1D4E14;
     z-index: 6;
     position: relative;
 }
 .problem_statement .content{
     height: 496px;
-    left: 0px;
-    top: 792px;
     margin: 0 auto;
     box-sizing: border-box;
     border-radius: 0px;
@@ -173,12 +179,14 @@ problem statement */
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-    width: 960px;
-    height: 168px;
+    width: 100%;
+    max-width: 960px;
+    height: max-content;
 }
 .problem_statement .content .texts h1{
-    width: 960px;
-    height: 48px;
+    max-width: 960px;
+    width: 100%;
+    height: max-content;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -187,7 +195,8 @@ problem statement */
     color: #3E1D4E;
 }
 .problem_statement .content .texts p{
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
     height: 96px;
     font-style: normal;
     font-weight: 400;
@@ -200,7 +209,8 @@ problem statement */
     color: #3E1D4E;
     border: 1px solid #3E1D4E;
 }
-.problem_statement .content .btn .purple{
+.problem_statement .content .btn a.purple{
+    
     background-color: #3E1D4E;
     color: white;
     border: 1px solid #3E1D4E;
@@ -218,7 +228,6 @@ problem statement */
     align-items: flex-start;
     padding: 120px;
     gap: 40px;
-    height: 656px;
 }
 .discover .content h1{
     height: 24px;
@@ -237,9 +246,8 @@ problem statement */
     align-items: flex-start;
     padding: 0px;
     gap: 40px;
-    width: 960px;
-    height: 352px;
-
+    width: 100%;
+    max-width: 960px;
 }
 .discover .content .frame5 .hireTalent{
     box-sizing: border-box;
@@ -285,7 +293,7 @@ height: 24px;
     padding: 120px;
     gap: 40px;
     max-width: 1200px;
-    height: 732px;
+    height: max-content;
     background: #FFFFFF;
 }
 .services .content h1{
@@ -306,7 +314,6 @@ box-sizing: border-box;
 gap: 40px;
 max-width: 960px;
 width: 100%;
-height: 428px;
 background: rgba(62, 29, 78, 0.04);
 border-radius: 8px;
 }
@@ -346,4 +353,353 @@ height: 348px;
     line-height: 24px;
     letter-spacing: -0.04em;
     color: #3E1D4E;
+}
+
+/* 
+reviews */
+
+.reviews{
+    background-color: #ECCB5E;
+}
+.reviews .content{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px;
+    gap: 40px;
+    width: 1200px;
+    height: 736px;
+}
+.reviews .content h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.04em;
+    color: rgba(62, 29, 78, 0.4);
+}
+.reviews .content .header{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 104px;
+    height: 128px;
+}
+.reviews .content .header h2{
+    width: 428px;
+    height: 96px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    letter-spacing: -0.04em;
+    color: #3E1D4E;
+}
+.reviews .content .header p{
+    width: 428px;
+    height: 120px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    color: rgba(62, 29, 78, 0.64);
+}
+.reviews .content .swiperContent{
+    display: flex;
+flex-direction: row;
+justify-content: start;
+align-items: center;
+padding: 0px;
+gap: 40px;
+overflow-x: scroll;
+width: 960px;
+height: 224px;
+}
+.swiperContent::-webkit-scrollbar{
+    display: none;
+}
+.reviews .content .swiperContent .review{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 40px;
+gap: 24px;
+
+width: 480px;
+height: 224px;
+box-sizing: border-box;
+background: #FFFFFF;
+border-radius: 4px;
+}
+
+.reviews .content .swiperContent .review p{
+    width: 400px;
+    height: 96px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    letter-spacing: -0.04em;
+    color: rgba(62, 29, 78, 0.64);
+}
+.reviews .content .swiperContent .review h3{
+    width: 400px;
+    height: 24px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    letter-spacing: -0.04em;
+    color: #3E1D4E;
+}
+.reviews .content .slide{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 176px;
+}
+.reviews .content .slide .ctrl{
+    width: 48px;
+height: 0px;
+border: 4px solid #FFFFFF66;
+}
+.reviews .content .slide .ctrl.active{
+    border-color: white;
+}
+
+
+
+
+/* CTA  */
+
+.cta{
+    background: linear-gradient(0deg, rgba(62, 29, 78, 0.08), rgba(62, 29, 78, 0.08)), #FFFFFF;
+}
+.cta .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    gap: 40px;
+    width: 1200px;
+    height: 464px;
+}
+.cta .content .slide{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 112px;
+    height: 0px;
+}
+.cta .content .slide .ctrl{
+    width: 48px;
+    height: 0px;
+    border: 4px solid rgba(62, 29, 78, 0.24);
+}
+.cta .content .slide .ctrl.active{
+    border-color: #3E1D4E;
+}
+.cta .content .texts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    max-width: 960px;
+}
+.cta .content .texts h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #3E1D4E;
+    width: 100%;
+}
+.cta .content .texts p{
+    font-style: normal;
+    width: 100%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    color: rgba(62, 29, 78, 0.64);
+}
+.cta .content .btn{
+    width: max-content;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #3E1D4E;
+}
+footer .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    gap: 40px;
+    width: 1200px;
+    height: 516px;
+}
+footer .content .top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    width: 960px;
+    height: 100px;
+}
+footer .content .top .texts{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 4px;
+
+width: 960px;
+height: 52px;
+}
+footer .content .top .texts p{
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+footer .content .top .texts a{
+    color: #ECCB5E;
+}
+footer .content p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    color: #FFFFFF;
+}
+#hamburger{
+    display: none;
+}
+
+
+/* mobile view */
+@media (max-width: 1100px) {
+    .discover .content .frame5{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer .content,nav,.Hero .content,.cta .content,.problem_statement .content,.services .content,.reviews .content ,.discover .content{
+        padding: 50px;
+        width: 100%;
+    }
+    .problem_statement .content{
+        height: fit-content;
+    }
+    .services .content .frame5 .detailsHold details summary{
+        max-width: 520px;
+        width: 100%;
+    }
+    .services .content .frame5 .detailsHold{
+        align-items: stretch;
+    }
+}
+@media (max-width: 1000px) {
+    .reviews .content .header,.discover .content .frame5{
+        gap: 10px;
+    }
+.reviews .content .header h2, .reviews .content .header p{
+    max-width: 428px;
+    width: 50%;
+}
+}
+@media (max-width: 800px) {
+    .services .content .frame5{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .reviews .content .header h2,.reviews .content .header p,.reviews .content .header{
+        height: max-content;
+    }
+}
+@media (max-width: 700px) {
+    .Hero .content .images{
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%);
+        top: 40%;
+    }
+    .Hero .content .images img:first-child{
+        left: -100px;
+    }
+    .Hero .content{
+        height: 1024px;
+    }
+    .problem_statement .content .texts p{
+        height: max-content;
+    }
+}
+@media (max-width: 600px) {
+    #hamburger{
+        display: block;
+        padding-right: 50px;
+    }
+    nav .links{
+        flex-direction: column;
+        align-items: center;
+        top: -1000px;
+        position: absolute;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header nav{
+        justify-content: start;
+        padding: 0px;
+        padding-left: 50px;
+    }
+    .Hero .content .texts{
+        height: max-content;
+    }
+    .reviews .content .header{
+        flex-direction: column;
+    }
+    .reviews .content .header h2, .reviews .content .header p{
+        width: 100%;
+    }
 }
