@@ -429,7 +429,7 @@ reviews */
     display: flex;
     align-items: center;
     padding: 0px;
-    gap: 200px;
+    gap: 40px;
     overflow-x: scroll;
     max-width: 960px;
     width: 100%;
