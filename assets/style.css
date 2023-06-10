@@ -355,6 +355,7 @@ height: max-content;
 }
 .services .content .frame5 .detailsHold details p{
     height: 72px;
+    margin-top: 24px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -480,7 +481,6 @@ flex-direction: row;
 align-items: flex-start;
 padding: 0px;
 gap: 16px;
-
 width: 176px;
 }
 .reviews .content .slide .ctrl{
@@ -785,7 +785,6 @@ footer .content p{
         font-size: 24px;
     }
     .services .content .frame5 .detailsHold details p{
-        
         height: max-content;
         font-size: 14px;
     }
