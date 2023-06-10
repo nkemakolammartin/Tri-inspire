@@ -7,6 +7,9 @@
     text-decoration: none;
     margin: 0;
 }
+.gif{
+    mix-blend-mode: multiply;
+}
 html{
     width: 100vw;
     overflow-x: hidden;
@@ -268,6 +271,7 @@ problem statement */
     height: 352px;
     border: 1px solid #ECCB5E;
     border-radius: 8px;
+    background-color: white;
 }
 .discover .content .frame5 .hireTalent .hireText{
     width: 213.33px;
@@ -652,6 +656,8 @@ footer .content p{
 @media (max-width: 1100px) {
     .discover .content .frame5{
         flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
     footer .content,nav,.Hero .content,.cta .content,.problem_statement .content,.services .content,.reviews .content ,.discover .content{
@@ -683,8 +689,8 @@ footer .content p{
         max-width: 700px;
     }
     .services .content .frame5{
-        flex-wrap: wrap;
         justify-content: center;
+
     }
     .reviews .content .header h2,.reviews .content .header p,.reviews .content .header{
         height: max-content;
@@ -825,7 +831,6 @@ footer .content p{
         height: max-content;
     }
     #servicesImg{
-        max-width: 302px;
         width: 100%;
     }
 }
