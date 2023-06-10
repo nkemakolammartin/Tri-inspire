@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Tri-inspire</title>
-    <!-- image for title  and description-->
+    <!-- image for title, description, favicon image, and usefireship video to optimize speed -->
 </head>
 <body>
     <header>
@@ -119,15 +119,15 @@
                 <p>Tri Inspire has successfully facilitated numerous talent acquisitions, transforming businesses and careers. Don't just take our word for it – hear from our satisfied clients and talented individuals who have experienced the Tri Inspire difference.</p>
             </div>
             <div class="swiperContent">
-                <div class="review">
+                <div class="review 1">
                     <p>Thanks to Tri-inspire, I successfully secured an exceptional job offer, and the entire hiring process was remarkably streamlined and devoid of any undue stress</p>
                     <h3>Youdiowei Eteimorde.</h3>
                 </div>
-                <div class="review">
+                <div class="review 2">
                     <p>Tri-Inspire kickstarted my international career by helping me land my first international job within a month. They also provided invaluable guidance on optimizing my Linkedln profile. Thank you for transforming my career journey!</p>
                     <h3>funmi Ademuyiwa.</h3>
                 </div>
-                <div class="review">
+                <div class="review 3">
                     <p>My experience was incredibly smooth with Tri-Inspire. The interview process was seamless, and I received prompt responses after each interview. The overall experience was friendly and positive. Highly recommended!</p>
                     <h3>Amidiagbe Bright.</h3>
                 </div>
@@ -145,13 +145,27 @@
                 <div class="ctrl active"></div>
                 <div class="ctrl"></div>
             </div>
-            <div class="texts">
-                <h1>Ready to hire the best talents for your tech company?</h1>
-                <p>Let's discuss your needs and explore how Tri Inspire can assist you. Book a call with our experts today.</p>
+            <div class="swiperContent">
+                <div class="card 1">
+                    <div class="texts">
+                        <h1>Ready to hire the best talents for your tech company?</h1>
+                        <p>Let's discuss your needs and explore how Tri Inspire can assist you. Book a call with our experts today.</p>
+                    </div>
+                    <div class="btn">
+                        <a href="http://calendly.com/timilehin_adekunle" class="purple">Hire talent</a>
+                    </div>
+                </div>
+                <div class="card 2">
+                    <div class="texts">
+                        <h1>Ready to take the next step in your career?</h1>
+                        <p>Join our talent pool and get access to exceptional job opportunities with cutting-edge tech companies. Get hired and embark on your professional journey now.</p>
+                    </div>
+                    <div class="btn">
+                        <a href="http://bit.ly/Gethiredtriinspire" class="purple">Get hired</a>
+                    </div>
+                </div>
             </div>
-            <div class="btn">
-                <a href="http://calendly.com/timilehin_adekunle" class="purple">Hire talent</a>
-            </div>
+            
         </div>
     </section>
     <footer>
@@ -165,9 +179,7 @@
             </div>
             <div class="socials">
                 <!-- add a tags to the pictures -->
-                <a href=""><img src="./assets/images/FacebookLogo.png" alt="Tri inspire facebook"></a>
                 <a href="https://instagram.com/triinspire?igshid=NTc4MTIwNjQ2YQ=="><img src="./assets/images/InstagramLogo.png" alt="Tri inspire instagram"></a>
-                <a href=""></a><img src="./assets/images/TwitterLogo.png" alt="Tri inspire twitter"></a>
                 <a href="https://www.linkedin.com/in/triinspire"><img src="./assets/images/LinkedinLogo.png" alt="Tri inspire Linkedin"></a>
             </div>
             <div class="line"></div>
@@ -178,30 +190,38 @@
 <script>
     let ctaBtn = document.querySelectorAll(".cta .content .slide .ctrl")
     let ctaContent = document.querySelector('.cta .content .texts')
-    let objForCta = [
-        {
-            h1: 'Ready to hire the best talents for your tech company?',
-            p: "Let's discuss your needs and explore how Tri Inspire can assist you. Book a call with our experts today.",
-            href: 'http://calendly.com/timilehin_adekunle',
-            content: 'Hire talent'
-        },
-        {
-            h1: 'Ready to take the next step in your career?',
-            p: "Join our talent pool and get access to exceptional job opportunities with cutting-edge tech companies. Get hired and embark on your professional journey now.",
-            href: "http://bit.ly/Gethiredtriinspire",
-            content: 'Get hired'
-        }]
     let cta_A = document.querySelector(".cta .content .btn a")
     let btn = document.querySelector('#hamburger')
     let nav = document.querySelector('header nav .links')
     let servicesImg = document.querySelector('#servicesImg')
     let swipeIndex = 0
     let ctaSwipeIndex = 0
+    let ctaContainer = document.querySelector('.cta .content .swiperContent')
     let details = document.querySelectorAll('details')
     let path = ['./assets/images/small image man.png','./assets/images/small image woman.png']
     let ctrl = document.querySelectorAll('.reviews .content .slide .ctrl')
     let swiperContent = document.querySelector('.swiperContent')
     let images = document.querySelectorAll('.Hero .content .images img')
+    let observer = new IntersectionObserver((entries, id)=>{
+        if (entries[0].isIntersecting) {
+            entries[0].target.className.includes('1') && ctrl.forEach((item, id)=> id === 0 ? item.classList.add('active') : item.classList.remove('active')) && console.log('first')
+            entries[0].target.className.includes('2') && ctrl.forEach((item, id)=> id === 1 ? item.classList.add('active') : item.classList.remove('active')) && console.log('second')
+            entries[0].target.className.includes('3') && ctrl.forEach((item, id)=> id === 2 ? item.classList.add('active') : item.classList.remove('active')) && console.log('third')
+        }
+    },{
+        root: document.querySelector('.reviews .content .swiperContent')
+    })
+    document.querySelectorAll('.reviews .content .swiperContent .review').forEach((item, id)=> observer.observe(item))
+    let observer1 = new IntersectionObserver((entries, id)=>{
+        if (entries[0].isIntersecting) {
+            console.log('see')
+            entries[0].target.className.includes('1') && ctaBtn.forEach((item, id)=> id === 0 ? item.classList.add('active') : item.classList.remove('active'))
+            entries[0].target.className.includes('2') && ctaBtn.forEach((item, id)=> id === 1 ? item.classList.add('active') : item.classList.remove('active'))
+        }
+    },{
+        root: document.querySelector('.cta .content .swiperContent')
+    })
+    document.querySelectorAll('.cta .content .swiperContent .card').forEach((item, id)=> observer1.observe(item))
     document.body.clientWidth === 600 && path.forEach((pathUrl, id)=> images[id].src = pathUrl); servicesImg.src = './assets/images/small service img.png';
     details.forEach((currentDetail)=>{
         currentDetail.onclick=()=>{
@@ -212,6 +232,7 @@
             })
         }
     })
+
     btn.onclick=()=>{
         if (nav.className.includes('active')) {
             nav.classList.remove('active')
@@ -219,20 +240,17 @@
             nav.classList.add('active')
         }
     }
+    nav.childNodes.forEach((a_Tag)=> a_Tag.onclick=()=>{
+        nav.classList.remove('active')
+    })
     ctaBtn.forEach((btn, id)=>{
         btn.onclick=()=>{
             ctaBtn.forEach(button => button.classList.remove('active'))
             if (id === 0) {
-                ctaContent.children[0].textContent = objForCta[id].h1
-                ctaContent.children[1].textContent = objForCta[id].p
-                cta_A.href = objForCta[id].href
-                cta_A.textContent = objForCta[id].content
+                ctaContainer.scrollLeft = 0
                 btn.classList.add('active')
             } else {
-                ctaContent.children[0].textContent = objForCta[id].h1
-                ctaContent.children[1].textContent = objForCta[id].p
-                cta_A.href = objForCta[id].href
-                cta_A.textContent = objForCta[id].content
+                ctaContainer.scrollLeft = ctaContainer.clientWidth
                 btn.classList.add('active')
             }
         }
@@ -244,19 +262,19 @@
                     ctrl.forEach(btn1=> btn1.classList.remove('active'))
                     btn.classList.add('active')
                     swipeIndex = 0
-                    swiperContent.setAttribute('style', 'justify-content: start')
+                    document.querySelector('.reviews .content .swiperContent').scrollLeft = 0
                     break;
                 case 1:
                     ctrl.forEach(btn1=> btn1.classList.remove('active'))
                     btn.classList.add('active')
                     swipeIndex = 1
-                swiperContent.setAttribute('style', 'justify-content: center')
+                    document.querySelector('.reviews .content .swiperContent').scrollLeft = document.querySelector('.reviews .content .swiperContent').clientWidth/2
                     break
                 case 2:
                     ctrl.forEach(btn1=> btn1.classList.remove('active'))
                     btn.classList.add('active')
                     swipeIndex = 2
-                swiperContent.setAttribute('style', 'justify-content: end')
+                    document.querySelector('.reviews .content .swiperContent').scrollLeft = document.querySelector('.reviews .content .swiperContent').clientWidth
                     break;
             }
         }
@@ -268,35 +286,29 @@
        switch (swipeIndex) {
                 case 0:
                     ctrl.forEach((btn1, id)=> id === 0 ? btn1.classList.add('active') : btn1.classList.remove('active'))
-                    swiperContent.setAttribute('style', 'justify-content: start')
+                    document.querySelector('.reviews .content .swiperContent').scrollLeft = 0
                     break;
                 case 1:
                     ctrl.forEach((btn1, id)=> id === 1 ? btn1.classList.add('active') : btn1.classList.remove('active'))
-                swiperContent.setAttribute('style', 'justify-content: center')
+                    document.querySelector('.reviews .content .swiperContent').scrollLeft = document.querySelector('.reviews .content .swiperContent').clientWidth/2
                     break
                 case 2:
                     ctrl.forEach((btn1, id)=> id === 2 ? btn1.classList.add('active') : btn1.classList.remove('active'))
-                swiperContent.setAttribute('style', 'justify-content: end')
+                    document.querySelector('.reviews .content .swiperContent').scrollLeft = document.querySelector('.reviews .content .swiperContent').clientWidth
                     break;
             }
             if (ctaSwipeIndex === 0) {
-                ctaContent.children[0].textContent = objForCta[ctaSwipeIndex].h1
-                ctaContent.children[1].textContent = objForCta[ctaSwipeIndex].p
-                cta_A.href = objForCta[ctaSwipeIndex].href
-                cta_A.textContent = objForCta[ctaSwipeIndex].content
-                ctaBtn.forEach((btn, id)=> ctaSwipeIndex === id ? btn.classList.add('active') : btn.classList.remove('active'))                
+                ctaContainer.scrollLeft = 0
+                ctaBtn.forEach((button, id) => id === ctaSwipeIndex ? button.classList.add('active') : button.classList.remove('active'))            
             }else{      
-                ctaContent.children[0].textContent = objForCta[ctaSwipeIndex].h1
-                ctaContent.children[1].textContent = objForCta[ctaSwipeIndex].p
-                cta_A.href = objForCta[ctaSwipeIndex].href
-                cta_A.textContent = objForCta[ctaSwipeIndex].content
-                ctaBtn.forEach((btn, id)=> ctaSwipeIndex === id ? btn.classList.add('active') : btn.classList.remove('active'))                
+                ctaContainer.scrollLeft = ctaContainer.clientWidth
+                ctaBtn.forEach((button, id) => id === ctaSwipeIndex ? button.classList.add('active') : button.classList.remove('active'))
             }
     }
     setInterval(()=>{
         if (document.body.clientWidth > 600) {
             autoSwipe()
         }
-    }, 5000)
+    }, 15000)
 </script>
 </html>
