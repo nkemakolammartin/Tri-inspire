@@ -336,7 +336,7 @@ align-items: flex-start;
 padding: 0px;
 gap: 24px;
 justify-content: space-between;
-width: 520px;
+max-width: 520px;
 height: max-content;
 }
 .services .content .frame5 .detailsHold details summary{
@@ -673,6 +673,7 @@ footer .content p{
     }
     .services .content .frame5 .detailsHold{
         align-items: stretch;
+        max-width: 520px;
     }
 }
 @media (max-width: 1000px) {
@@ -686,11 +687,11 @@ footer .content p{
 }
 @media (max-width: 800px) {
     .cta .content .swiperContent .card{
-        max-width: 700px;
+        min-width: 700px;
     }
     .services .content .frame5{
         justify-content: center;
-
+        flex-direction: column;
     }
     .reviews .content .header h2,.reviews .content .header p,.reviews .content .header{
         height: max-content;
@@ -720,6 +721,9 @@ footer .content p{
     }
 }
 @media (max-width: 600px) {
+    .cta .content .swiperContent .card{
+        min-width: 300px;
+    }
     #hamburger{
         display: block;
         padding-right: 50px;
